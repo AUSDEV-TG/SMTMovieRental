@@ -1,0 +1,275 @@
+body {background-color: #252422;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {float: left;}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {background-color: #111;}
+
+option {min-height: 100px;}
+
+select, option {
+  border: 1px solid black;
+  font-size: 14px;
+  height: 100%;
+}
+
+option:nth-child(odd) {background-color: #93827f}
+option:nth-child(even) {background-color: #ccc;}
+
+form {display: inline;}
+
+table, th, td {
+  border: 1px solid black;
+  animation-name: enlarge;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+th, td {padding: 15px;}
+
+th:nth-child(odd) {background-color: #706a61;}
+
+th:nth-child(even) {background-color: #a39b8d;}
+
+td:nth-child(odd) {background-color: #948b7e;}
+
+td:nth-child(even) {background-color: #ccc5b9;}
+
+td:nth-child(6)::before {content: '$'}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-size: 12pt;
+  background-color: #93827f;
+  color: black;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headingbox, .maincontent, .moviepane, .footer {
+  text-align: center;
+}
+
+.headingbox {
+  background-color: #ccc5b9;
+  width: 100%;
+  height: 40%;
+  border: 1px solid black;
+  border-top-left-radius: 5pt;
+  border-top-right-radius: 5pt;
+  box-sizing: border-box;
+  padding: 1%;
+  margin: right;
+  position: relative;
+  left: 0%;
+  right: auto;
+  position: relative;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.menubar a:nth-child(1) {
+  height: 100%;
+  border-bottom-left-radius: 5pt;
+} 
+
+.menubar {
+  overflow: hidden;
+  background-color: #fffcf2;
+  border-bottom-left-radius: 5pt;
+  border-bottom-right-radius: 5pt;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.menubar a {
+  border-right: 1px solid black;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menubar a:hover {
+  color: black;
+  animation-name: pulse;
+  animation-duration: 0.2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.menubar a.active {
+  background-image: radial-gradient(#403d39 45%, #706a61 80%, grey 98%);
+  color: white;
+}
+
+.menubar .search-container {float: right;}
+
+.menubar input[type=text] {
+  background-color: #ccc5b9;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.menubar .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.menubar .search-container button:hover {background: #ccc;}
+
+.maincontent {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin: right;
+  position: relative;
+  float: right;
+  background-color: #93827f;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.maincontent img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.moviepane {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  min-height: 60px;
+  margin: 1px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  background-color: #3f4045;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.moviepane a {color: #FFFFFF;}
+
+.datapane {
+  width: 98.9%;
+  height: 100%;
+  padding: 5px;
+  background-color: #93827f;
+}
+
+.datapane p {text-align: right;}
+
+.footer {
+  writing-mode: horizontal-tb;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  background-color: #eb5e28;
+  color: white;
+  animation-delay: 1s;
+  animation-name: popUp;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.footer::before {content: '© ';}
+
+a.footer {color: white;}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to   {opacity: 100;}
+}
+
+@keyframes pulse {
+  0%   {background-image: radial-gradient(#ddd 55%, silver 70%, grey 95%);}
+  5%   {background-image: radial-gradient(#ddd 52.5%, silver 67.5%, grey 92.5%);}
+  10%  {background-image: radial-gradient(#ddd 50%, silver 65%, grey 90%);}
+  15%  {background-image: radial-gradient(#ddd 47.5%, silver 62.5%, grey 87.5%);} 
+  20%  {background-image: radial-gradient(#ddd 45%, silver 60%, grey 85%);}
+  25%  {background-image: radial-gradient(#ddd 42.5%, silver 57.5%, grey 82.5%);}
+  30%  {background-image: radial-gradient(#ddd 40%, silver 55%, grey 80%);}
+  35%  {background-image: radial-gradient(#ddd 37.5%, silver 52.5%, grey 77.5%);}
+  40%  {background-image: radial-gradient(#ddd 35%, silver 50%, grey 75%);}
+  45%  {background-image: radial-gradient(#ddd 32.5%, silver 47.5%, grey 72.5%);}
+  50%  {background-image: radial-gradient(#ddd 30%, silver 45%, grey 70%);}
+  55%  {background-image: radial-gradient(#ddd 27.5%, silver 42.5%, grey 67.5%);}
+  60%  {background-image: radial-gradient(#ddd 25%, silver 40%, grey 65%);}
+  65%  {background-image: radial-gradient(#ddd 22.5%, silver 37.5%, grey 62.5%);}
+  70%  {background-image: radial-gradient(#ddd 20%, silver 35%, grey 60%);}
+  75%  {background-image: radial-gradient(#ddd 17.5%, silver 32.5%, grey 57.5%);}
+  80%  {background-image: radial-gradient(#ddd 15%, silver 30%, grey 55%);}
+  85%  {background-image: radial-gradient(#ddd 12.5%, silver 27.5%, grey 52.5%);}
+  90%  {background-image: radial-gradient(#ddd 10%, silver 25%, grey 50%);}
+  95%  {background-image: radial-gradient(#ddd 7.5%, silver 22.5%, grey 47.5%);}
+  100% {background-image: radial-gradient(#ddd 5%, silver 20%, grey 45%);}
+}
+
+@keyframes enlarge {
+  from {font-size: 0pt;}
+  to   {font-size: 12pt;}
+}
+
+@keyframes popUp {
+  from {height: 0%;}
+  to   {height: 2%;}
+}
+
+@media screen and (max-width: 600px) {
+  .menubar .search-container {float: none;}
+
+  .menubar a, .menubar input[type=text], .menubar .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .menubar input[type=text] {border: 1px solid #ccc;}
+}
+
